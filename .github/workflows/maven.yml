@@ -4,16 +4,16 @@
 name: Java CI with Maven
 on:
   push:
-    branches: [ master, main ]
+    branches: [ main ]
   pull_request:
-    branches: [ master, main ]
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: master
+        ref: main
     - name: Cache local Maven repository
       uses: actions/cache@v4
       with:
