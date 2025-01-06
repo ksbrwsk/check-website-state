@@ -1,7 +1,5 @@
 ## Simple Spring Boot app to check my web app availability.
 
-
-
 Build & run
 -----------
 
@@ -17,7 +15,7 @@ Build & run
 The list of websites to check can be edited in the file
 
 ```bash
-./src/main/resources/data.csv
+./src/main/resources/website_urls.csv
 ```
 
 Build with
@@ -45,3 +43,9 @@ http://localhost:8080
 ```
 
 to see the result.
+
+
+```bash
+docker build -t check-website-state .
+docker run -d --name check-website-state -p 9060:9060 check-website-state
+```
